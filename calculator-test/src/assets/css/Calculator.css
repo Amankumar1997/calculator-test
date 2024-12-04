@@ -1,0 +1,208 @@
+.calculator-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above the calculator */
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+.sidebar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  overflow: hidden;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* z-index: 5; */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+.sidebar .tabbar {
+  position: relative;
+  width: 90%;
+}
+
+.sidebar .tabbar ul {
+  list-style: none;
+  padding: 0;
+  display: block;
+  margin: 0;
+}
+
+.sidebar .tabbar ul li {
+  margin: 15px 0;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px 0 0;
+}
+.sidebar .history-panel ul {
+  list-style: none;
+  padding: 0;
+  display: block;
+  margin: 0;
+}
+
+.sidebar .history-panel ul li {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  margin: 15px 0 0 0;
+}
+.sidebar .tabbar .close-btn {
+    cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  background-color: white;
+  border: none;
+  font-size: 18px;
+}
+.sidebar li:hover {
+  text-decoration: underline;
+}
+.sidebar .history-panel {
+  position: relative;
+  width: 90%;
+  height: 100%;
+}
+.sidebar .history-panel .bottom-bar {
+    cursor: pointer;
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+}
+
+.display {
+  background-color: transparent;
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+.display .query {
+  font-size: 1.2em;
+  color: black;
+}
+.display .result {
+  font-size: 1.2em;
+  color: black;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.button-grid .btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.memory-buttons {
+  grid-column: span 4; /* Memory buttons span across the full width */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 5 buttons in one row */
+  gap: 25px;
+  margin-bottom: 5px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.number {
+  background-color: #f3f3f3;
+}
+
+.number:hover {
+  background-color: #e0e0e0;
+}
+
+.operator {
+  background-color: white;
+  color: #120f0f;
+}
+
+.operator:hover {
+  background-color: #e0e0e0;
+}
+
+.memory {
+  background-color: transparent;
+  color: #050404;
+}
+
+.memory:hover {
+  background-color: #e0e0e0;
+}
+
+.equals {
+  grid-column: span 2;
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.equals:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #c0c0c0;
+}
+
+@media (max-width: 450px) {
+  .calculator-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .display {
+    font-size: 1.2em;
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 1.1em;
+  }
+}
